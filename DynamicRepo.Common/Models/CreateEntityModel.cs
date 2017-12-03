@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace DynamicRepo.Common.Models
 {
@@ -10,6 +8,6 @@ namespace DynamicRepo.Common.Models
         public string StoreGroupId { get; set; }
         public string EntityName { get; set; }
         public string EntityUID { get; set; }
-        public string [] Constraints { get; set; }
+        public string[] Constraints { get; set; }
     }
 }

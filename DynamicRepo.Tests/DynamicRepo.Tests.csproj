@@ -55,6 +55,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DynamicRepo.APCI\DynamicRepo.APCI.csproj">
+      <Project>{24e8bea1-1c8a-4297-9948-7c0a5d12686a}</Project>
+      <Name>DynamicRepo.APCI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DynamicRepo.Business\DynamicRepo.Business.csproj">
       <Project>{e7b4f4f9-d7e4-4f5f-ad6d-6238d7be276c}</Project>
       <Name>DynamicRepo.Business</Name>
@@ -70,6 +74,10 @@
     <ProjectReference Include="..\DynamicRepo.Injection\DynamicRepo.Injection.csproj">
       <Project>{3d97cd6d-0f6b-4a15-bda0-a6213fd44006}</Project>
       <Name>DynamicRepo.Injection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DynamicRepo.ServiceConfiguration\DynamicRepo.ServiceConfiguration.csproj">
+      <Project>{e30eb08f-8957-4288-82cc-7478b20bd4d7}</Project>
+      <Name>DynamicRepo.ServiceConfiguration</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

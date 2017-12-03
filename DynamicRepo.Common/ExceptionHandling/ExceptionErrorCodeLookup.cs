@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DynamicRepo.Common.ExceptionHandling
+﻿namespace DynamicRepo.Common.ExceptionHandling
 {
-    class ExceptionErrorCodeLookup
+    internal class ExceptionErrorCodeLookup
     {
     }
 }
