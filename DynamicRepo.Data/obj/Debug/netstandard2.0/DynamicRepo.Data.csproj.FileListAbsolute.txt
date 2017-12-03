@@ -1,0 +1,9 @@
+C:\SourceRepo\DynamicRepo\DynamicRepo.Data\bin\Debug\netstandard2.0\DynamicRepo.Data.deps.json
+C:\SourceRepo\DynamicRepo\DynamicRepo.Data\bin\Debug\netstandard2.0\DynamicRepo.Data.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Data\obj\Debug\netstandard2.0\DynamicRepo.Data.csprojResolveAssemblyReference.cache
+C:\SourceRepo\DynamicRepo\DynamicRepo.Data\obj\Debug\netstandard2.0\DynamicRepo.Data.csproj.CoreCompileInputs.cache
+C:\SourceRepo\DynamicRepo\DynamicRepo.Data\obj\Debug\netstandard2.0\DynamicRepo.Data.AssemblyInfoInputs.cache
+C:\SourceRepo\DynamicRepo\DynamicRepo.Data\obj\Debug\netstandard2.0\DynamicRepo.Data.AssemblyInfo.cs
+C:\SourceRepo\DynamicRepo\DynamicRepo.Data\bin\Debug\netstandard2.0\DynamicRepo.Data.pdb
+C:\SourceRepo\DynamicRepo\DynamicRepo.Data\obj\Debug\netstandard2.0\DynamicRepo.Data.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Data\obj\Debug\netstandard2.0\DynamicRepo.Data.pdb

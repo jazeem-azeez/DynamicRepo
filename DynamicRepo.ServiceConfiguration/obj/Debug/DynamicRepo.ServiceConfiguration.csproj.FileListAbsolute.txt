@@ -1,0 +1,6 @@
+C:\SourceRepo\DynamicRepo\DynamicRepo.ServiceConfiguration\bin\Debug\DynamicRepo.ServiceConfiguration.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.ServiceConfiguration\bin\Debug\DynamicRepo.ServiceConfiguration.pdb
+C:\SourceRepo\DynamicRepo\DynamicRepo.ServiceConfiguration\obj\Debug\DynamicRepo.ServiceConfiguration.csprojResolveAssemblyReference.cache
+C:\SourceRepo\DynamicRepo\DynamicRepo.ServiceConfiguration\obj\Debug\DynamicRepo.ServiceConfiguration.csproj.CoreCompileInputs.cache
+C:\SourceRepo\DynamicRepo\DynamicRepo.ServiceConfiguration\obj\Debug\DynamicRepo.ServiceConfiguration.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.ServiceConfiguration\obj\Debug\DynamicRepo.ServiceConfiguration.pdb

@@ -1,0 +1,11 @@
+C:\SourceRepo\DynamicRepo\DynamicRepo.Injection\bin\Debug\netstandard2.0\DynamicRepo.Injection.deps.json
+C:\SourceRepo\DynamicRepo\DynamicRepo.Injection\bin\Debug\netstandard2.0\DynamicRepo.Injection.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Injection\bin\Debug\netstandard2.0\DynamicRepo.Injection.pdb
+C:\SourceRepo\DynamicRepo\DynamicRepo.Injection\bin\Debug\netstandard2.0\DynamicRepo.Common.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Injection\bin\Debug\netstandard2.0\DynamicRepo.Common.pdb
+C:\SourceRepo\DynamicRepo\DynamicRepo.Injection\obj\Debug\netstandard2.0\DynamicRepo.Injection.csprojResolveAssemblyReference.cache
+C:\SourceRepo\DynamicRepo\DynamicRepo.Injection\obj\Debug\netstandard2.0\DynamicRepo.Injection.csproj.CoreCompileInputs.cache
+C:\SourceRepo\DynamicRepo\DynamicRepo.Injection\obj\Debug\netstandard2.0\DynamicRepo.Injection.AssemblyInfoInputs.cache
+C:\SourceRepo\DynamicRepo\DynamicRepo.Injection\obj\Debug\netstandard2.0\DynamicRepo.Injection.AssemblyInfo.cs
+C:\SourceRepo\DynamicRepo\DynamicRepo.Injection\obj\Debug\netstandard2.0\DynamicRepo.Injection.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Injection\obj\Debug\netstandard2.0\DynamicRepo.Injection.pdb
