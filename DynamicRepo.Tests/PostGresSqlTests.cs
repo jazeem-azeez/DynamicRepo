@@ -10,7 +10,7 @@ namespace DynamicRepo.Tests.Business
         [TestMethod]
         public void CreateTableScriptGeneratorTests()
         {
-            PostGresSql p1 = new PostGresSql();
+            PostGresSqlStoreOperations p1 = new PostGresSqlStoreOperations(null,null);
             CreateEntityModel createEntityModel = new CreateEntityModel()
             {
                 AttributesCollection = new System.Collections.Generic.List<EntityAttribute>()
@@ -23,7 +23,7 @@ namespace DynamicRepo.Tests.Business
                 StoreGroupId = "database",
                 Constraints = new string[] { "\"TestTable_pkey\" PRIMARY KEY (id)" }
             };
-            var testOutStr = p1.CreateTableScriptGenerator(createEntityModel);
+            var testOutStr = p1.CreateEntity(createEntityModel);
         }
     }
 }

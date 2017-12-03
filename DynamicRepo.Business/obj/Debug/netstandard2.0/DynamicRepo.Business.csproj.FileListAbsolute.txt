@@ -9,3 +9,9 @@ C:\SourceRepo\DynamicRepo\DynamicRepo.Business\obj\Debug\netstandard2.0\DynamicR
 C:\SourceRepo\DynamicRepo\DynamicRepo.Business\obj\Debug\netstandard2.0\DynamicRepo.Business.pdb
 C:\SourceRepo\DynamicRepo\DynamicRepo.Business\bin\Debug\netstandard2.0\DynamicRepo.Common.dll
 C:\SourceRepo\DynamicRepo\DynamicRepo.Business\bin\Debug\netstandard2.0\DynamicRepo.Common.pdb
+C:\SourceRepo\DynamicRepo\DynamicRepo.Business\bin\Debug\netstandard2.0\DynamicRepo.APCI.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Business\bin\Debug\netstandard2.0\DynamicRepo.Data.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Business\bin\Debug\netstandard2.0\DynamicRepo.ServiceConfiguration.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Business\bin\Debug\netstandard2.0\DynamicRepo.APCI.pdb
+C:\SourceRepo\DynamicRepo\DynamicRepo.Business\bin\Debug\netstandard2.0\DynamicRepo.ServiceConfiguration.pdb
+C:\SourceRepo\DynamicRepo\DynamicRepo.Business\bin\Debug\netstandard2.0\DynamicRepo.Data.pdb

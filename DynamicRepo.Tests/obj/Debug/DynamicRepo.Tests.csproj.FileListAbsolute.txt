@@ -115,3 +115,7 @@ C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\obj\Debug\DynamicRepo.Tests.csprojRe
 C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\obj\Debug\DynamicRepo.Tests.csproj.CoreCompileInputs.cache
 C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\obj\Debug\DynamicRepo.Tests.dll
 C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\obj\Debug\DynamicRepo.Tests.pdb
+C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\bin\Debug\DynamicRepo.APCI.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\bin\Debug\DynamicRepo.ServiceConfiguration.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\bin\Debug\DynamicRepo.APCI.pdb
+C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\bin\Debug\DynamicRepo.ServiceConfiguration.pdb

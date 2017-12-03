@@ -9,7 +9,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DynamicRepo.APCI\DynamicRepo.APCI.csproj" />
     <ProjectReference Include="..\DynamicRepo.Common\DynamicRepo.Common.csproj" />
+    <ProjectReference Include="..\DynamicRepo.Data\DynamicRepo.Data.csproj" />
+    <ProjectReference Include="..\DynamicRepo.ServiceConfiguration\DynamicRepo.ServiceConfiguration.csproj" />
   </ItemGroup>
 
 </Project>

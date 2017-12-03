@@ -1,17 +1,11 @@
 ﻿using DynamicRepo.Common.Models;
-using System;
-using System.Linq;
 using System.Text;
 
-namespace DynamicRepo.Business
+namespace DynamicRepo.Business.Implementations.PostGres
 {
-    public class PostGresSql
+    public static class PostGresScripts
     {
-        public PostGresSql()
-        {
-
-        }
-        public string CreateTableScriptGenerator(CreateEntityModel createEntityModel)
+        public static string GenerateCreateTableScript(CreateEntityModel createEntityModel)
         {
             string result = string.Empty;
             StringBuilder stringBuilder = new StringBuilder();
@@ -21,7 +15,7 @@ namespace DynamicRepo.Business
             int i = 0;
             foreach (var item in createEntityModel.AttributesCollection)
             {
-                attributeString[i]=($" {item.AttributeName} {string.Join(" ", item.Properties)} \r\n");
+                attributeString[i] = ($" {item.AttributeName} {string.Join(" ", item.Properties)} \r\n");
                 i++;
             }
             stringBuilder.AppendLine(string.Join(", ", attributeString));
