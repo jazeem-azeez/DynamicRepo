@@ -313,3 +313,20 @@ OpenCover/
 
 # Azure Stream Analytics local run output 
 ASALocalRun/
+#Ignore thumbnails created by Windows
+Thumbs.db
+#Ignore files built by Visual Studio
+*.exe
+*.bak
+*.cache
+[Bb]in
+[Dd]ebug*/
+*.lib
+obj/
+[Rr]elease*/
+[Tt]est[Rr]esult*
+#Nuget packages folder
+packages/
+*.dll
+*.vs
+*.dll
