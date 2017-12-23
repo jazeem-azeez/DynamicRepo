@@ -10,14 +10,8 @@ C:\SourceRepo\DynamicRepo\DynamicRepo.Api\obj\Debug\netcoreapp2.0\DynamicRepo.Ap
 C:\SourceRepo\DynamicRepo\DynamicRepo.Api\obj\Debug\netcoreapp2.0\DynamicRepo.Api.pdb
 C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\DynamicRepo.Business.dll
 C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\DynamicRepo.Common.dll
-C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\DynamicRepo.Injection.dll
 C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\DynamicRepo.Business.pdb
 C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\DynamicRepo.Common.pdb
-C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\DynamicRepo.Injection.pdb
 C:\SourceRepo\DynamicRepo\DynamicRepo.Api\obj\Debug\netcoreapp2.0\DynamicRepo.Api.csprojResolveAssemblyReference.cache
-C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\DynamicRepo.Data.dll
-C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\DynamicRepo.ServiceConfiguration.dll
-C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\DynamicRepo.Data.pdb
-C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\DynamicRepo.ServiceConfiguration.pdb
-C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\DynamicRepo.APCI.dll
-C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\DynamicRepo.APCI.pdb
+C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\DynamicRepo.Contracts.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\DynamicRepo.Contracts.pdb

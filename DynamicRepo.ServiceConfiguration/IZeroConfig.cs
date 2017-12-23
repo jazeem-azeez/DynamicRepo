@@ -1,7 +1,8 @@
 ﻿namespace DynamicRepo.ServiceConfiguration
 {
-    public interface IConfig
+    public interface IZeroConfig
     {
         string PGConnectionString { get; set; }
+        string [] SupportedMechanisms { get; }
     }
 }

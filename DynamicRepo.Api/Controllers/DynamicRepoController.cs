@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 
 namespace DynamicRepo.Api.Controllers
@@ -16,13 +12,20 @@ namespace DynamicRepo.Api.Controllers
         {
             this.config = config;
         }
-        
-        [HttpGet("")]
+
+        [HttpGet("intro")]
         public string Get()
         {
             var intro = config.GetValue<string>("DynamicRepoIntro");
-            return string.IsNullOrEmpty(intro)?"Dynamic Repo is a simple crud store wrapper":intro;
+            return string.IsNullOrEmpty(intro) ? "Dynamic Repo is a simple crud store wrapper" : intro;
+        }
+
+        [HttpGet]
+        [Route("get-all-mechanisms")]
+        public object GetMechanisms()
+        {
+            var temp = config.GetSection("AppSettings:Mechanisms");
+            return temp;
         }
     }
-
 }

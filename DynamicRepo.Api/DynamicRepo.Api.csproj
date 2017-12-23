@@ -9,8 +9,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
+    <PackageReference Include="Autofac" Version="4.6.2" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="RabbitMQ.Client" Version="5.0.1" />
   </ItemGroup>
@@ -22,7 +25,6 @@
   <ItemGroup>
     <ProjectReference Include="..\DynamicRepo.Business\DynamicRepo.Business.csproj" />
     <ProjectReference Include="..\DynamicRepo.Common\DynamicRepo.Common.csproj" />
-    <ProjectReference Include="..\DynamicRepo.Injection\DynamicRepo.Injection.csproj" />
   </ItemGroup>
 
 </Project>

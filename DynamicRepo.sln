@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicRepo.Api", "DynamicRepo.Api\DynamicRepo.Api.csproj", "{B6D0CD74-DD1C-4BBA-9C94-74B050A388EA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicRepo.Business", "DynamicRepo.Business\DynamicRepo.Business.csproj", "{E7B4F4F9-D7E4-4F5F-AD6D-6238D7BE276C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicRepo.Injection", "DynamicRepo.Injection\DynamicRepo.Injection.csproj", "{3D97CD6D-0F6B-4A15-BDA0-A6213FD44006}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicRepo.Common", "DynamicRepo.Common\DynamicRepo.Common.csproj", "{E7A4E5FA-AD1C-4856-958A-B453B3736B3A}"
 EndProject
@@ -15,14 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicRepo.Data", "Dynamic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicRepo.Tests", "DynamicRepo.Tests\DynamicRepo.Tests.csproj", "{50F7D7A3-501D-42CC-BBB8-CFB9CF98D821}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicRepo.ServiceConfiguration", "DynamicRepo.ServiceConfiguration\DynamicRepo.ServiceConfiguration.csproj", "{E30EB08F-8957-4288-82CC-7478B20BD4D7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicRepo.APCI", "DynamicRepo.APCI\DynamicRepo.APCI.csproj", "{24E8BEA1-1C8A-4297-9948-7C0A5D12686A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{C6D5E11F-779E-45EA-BDF3-881CFD675B62}"
 	ProjectSection(SolutionItems) = preProject
+		ActivityTodo.txt = ActivityTodo.txt
 		Readme.md = Readme.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicRepo.Contracts", "DynamicRepo.Contracts\DynamicRepo.Contracts.csproj", "{70911B62-22D2-42ED-BDCA-D623370EBDB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,10 +35,6 @@ Global
 		{E7B4F4F9-D7E4-4F5F-AD6D-6238D7BE276C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7B4F4F9-D7E4-4F5F-AD6D-6238D7BE276C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7B4F4F9-D7E4-4F5F-AD6D-6238D7BE276C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3D97CD6D-0F6B-4A15-BDA0-A6213FD44006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D97CD6D-0F6B-4A15-BDA0-A6213FD44006}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D97CD6D-0F6B-4A15-BDA0-A6213FD44006}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D97CD6D-0F6B-4A15-BDA0-A6213FD44006}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E7A4E5FA-AD1C-4856-958A-B453B3736B3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E7A4E5FA-AD1C-4856-958A-B453B3736B3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7A4E5FA-AD1C-4856-958A-B453B3736B3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -54,14 +47,10 @@ Global
 		{50F7D7A3-501D-42CC-BBB8-CFB9CF98D821}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50F7D7A3-501D-42CC-BBB8-CFB9CF98D821}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50F7D7A3-501D-42CC-BBB8-CFB9CF98D821}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E30EB08F-8957-4288-82CC-7478B20BD4D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E30EB08F-8957-4288-82CC-7478B20BD4D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E30EB08F-8957-4288-82CC-7478B20BD4D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E30EB08F-8957-4288-82CC-7478B20BD4D7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{24E8BEA1-1C8A-4297-9948-7C0A5D12686A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{24E8BEA1-1C8A-4297-9948-7C0A5D12686A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{24E8BEA1-1C8A-4297-9948-7C0A5D12686A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{24E8BEA1-1C8A-4297-9948-7C0A5D12686A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70911B62-22D2-42ED-BDCA-D623370EBDB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70911B62-22D2-42ED-BDCA-D623370EBDB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70911B62-22D2-42ED-BDCA-D623370EBDB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70911B62-22D2-42ED-BDCA-D623370EBDB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,12 +9,11 @@
     ".NETStandard,Version=v2.0/": {
       "DynamicRepo.Business/1.0.0": {
         "dependencies": {
-          "DynamicRepo.APCI": "1.0.0",
           "DynamicRepo.Common": "1.0.0",
-          "DynamicRepo.Data": "1.0.0",
-          "DynamicRepo.ServiceConfiguration": "1.0.0",
+          "DynamicRepo.Contracts": "1.0.0",
           "NETStandard.Library": "2.0.0",
-          "Npgsql": "3.2.5"
+          "Npgsql": "3.2.5",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.0.0"
         },
         "runtime": {
           "DynamicRepo.Business.dll": {}
@@ -914,11 +913,6 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
-      "DynamicRepo.APCI/1.0.0": {
-        "runtime": {
-          "DynamicRepo.APCI.dll": {}
-        }
-      },
       "DynamicRepo.Common/1.0.0": {
         "dependencies": {
           "NLog": "5.0.0-beta11",
@@ -928,17 +922,14 @@
           "DynamicRepo.Common.dll": {}
         }
       },
-      "DynamicRepo.Data/1.0.0": {
-        "dependencies": {
-          "Npgsql": "3.2.5"
-        },
+      "DynamicRepo.Contracts/1.0.0": {
         "runtime": {
-          "DynamicRepo.Data.dll": {}
+          "DynamicRepo.Contracts.dll": {}
         }
       },
-      "DynamicRepo.ServiceConfiguration/1.0.0": {
+      "Microsoft.Extensions.Configuration.Abstractions/2.0.0.0": {
         "runtime": {
-          "DynamicRepo.ServiceConfiguration.dll": {}
+          "Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       }
     }
@@ -1488,23 +1479,18 @@
       "path": "system.xml.xmldocument/4.0.1",
       "hashPath": "system.xml.xmldocument.4.0.1.nupkg.sha512"
     },
-    "DynamicRepo.APCI/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "DynamicRepo.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "DynamicRepo.Data/1.0.0": {
+    "DynamicRepo.Contracts/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "DynamicRepo.ServiceConfiguration/1.0.0": {
-      "type": "project",
+    "Microsoft.Extensions.Configuration.Abstractions/2.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }
