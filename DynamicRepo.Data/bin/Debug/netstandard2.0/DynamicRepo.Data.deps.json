@@ -9,9 +9,11 @@
     ".NETStandard,Version=v2.0/": {
       "DynamicRepo.Data/1.0.0": {
         "dependencies": {
+          "DynamicRepo.Contracts": "1.0.0",
           "NETStandard.Library": "2.0.0",
           "Newtonsoft.Json": "10.0.3",
-          "Npgsql": "3.2.5"
+          "Npgsql": "3.2.5",
+          "ZeroConfigServiceSettings": "1.0.0"
         },
         "runtime": {
           "DynamicRepo.Data.dll": {}
@@ -482,6 +484,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
+      },
+      "DynamicRepo.Contracts/1.0.0": {
+        "runtime": {
+          "DynamicRepo.Contracts.dll": {}
+        }
+      },
+      "ZeroConfigServiceSettings/1.0.0": {
+        "dependencies": {
+          "DynamicRepo.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "ZeroConfigServiceSettings.dll": {}
+        }
       }
     }
   },
@@ -798,6 +813,16 @@
       "sha512": "sha512-lJ8AxvkX7GQxpC6GFCeBj8ThYVyQczx2+f/cWHJU8tjS7YfI6Cv6bon70jVEgs2CiFbmmM8b9j1oZVx0dSI2Ww==",
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "DynamicRepo.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ZeroConfigServiceSettings/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

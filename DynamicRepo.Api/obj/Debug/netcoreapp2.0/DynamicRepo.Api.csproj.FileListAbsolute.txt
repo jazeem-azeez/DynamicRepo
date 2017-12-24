@@ -15,3 +15,7 @@ C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\DynamicRepo.Co
 C:\SourceRepo\DynamicRepo\DynamicRepo.Api\obj\Debug\netcoreapp2.0\DynamicRepo.Api.csprojResolveAssemblyReference.cache
 C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\DynamicRepo.Contracts.dll
 C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\DynamicRepo.Contracts.pdb
+C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\DynamicRepo.Data.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\ZeroConfigServiceSettings.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\DynamicRepo.Data.pdb
+C:\SourceRepo\DynamicRepo\DynamicRepo.Api\bin\Debug\netcoreapp2.0\ZeroConfigServiceSettings.pdb

@@ -7,3 +7,7 @@ C:\SourceRepo\DynamicRepo\DynamicRepo.Data\obj\Debug\netstandard2.0\DynamicRepo.
 C:\SourceRepo\DynamicRepo\DynamicRepo.Data\bin\Debug\netstandard2.0\DynamicRepo.Data.pdb
 C:\SourceRepo\DynamicRepo\DynamicRepo.Data\obj\Debug\netstandard2.0\DynamicRepo.Data.dll
 C:\SourceRepo\DynamicRepo\DynamicRepo.Data\obj\Debug\netstandard2.0\DynamicRepo.Data.pdb
+C:\SourceRepo\DynamicRepo\DynamicRepo.Data\bin\Debug\netstandard2.0\DynamicRepo.Contracts.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Data\bin\Debug\netstandard2.0\ZeroConfigServiceSettings.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Data\bin\Debug\netstandard2.0\DynamicRepo.Contracts.pdb
+C:\SourceRepo\DynamicRepo\DynamicRepo.Data\bin\Debug\netstandard2.0\ZeroConfigServiceSettings.pdb

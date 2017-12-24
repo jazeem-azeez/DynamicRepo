@@ -1,6 +1,7 @@
 ﻿using DynamicRepo.Contracts.Business;
 using DynamicRepo.Contracts.Business.Constants;
 using Newtonsoft.Json.Linq;
+using Npgsql;
 using System;
 using System.Diagnostics.Contracts;
 using System.Threading.Tasks;
@@ -18,13 +19,22 @@ namespace DynamicRepo.Business.storegroup
 
         public Task<bool> CreateDataStore(JObject storeCreatejObject, string mechanism)
         {
-            var mechanismFromBody = storeCreatejObject.GetValue("mechansim");
+            var mechanismFromBody = storeCreatejObject.GetValue(nameof(mechanism));
 
             Contract.Ensures(mechanismFromBody.HasValues && !string.IsNullOrWhiteSpace(mechanismFromBody.ToString()));
             Contract.Assert(mechanism == mechanismFromBody.ToString(), "Mismatch betweeen mechnism and payload ");
+            try
+            {
 
-            var driver = _dataServiceFactory(Mechanisms.PostGres);
-            return driver.CreateDataStore(storeCreatejObject);
+                var driver = _dataServiceFactory(Mechanisms.PostGres);
+             
+                return driver.CreateDataStore(storeCreatejObject);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public bool EventSubscriptionRegistration(JObject EventFilterExpression)

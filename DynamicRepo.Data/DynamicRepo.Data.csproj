@@ -9,4 +9,9 @@
     <PackageReference Include="Npgsql" Version="3.2.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DynamicRepo.Contracts\DynamicRepo.Contracts.csproj" />
+    <ProjectReference Include="..\ZeroConfigServiceSettings\ZeroConfigServiceSettings.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -113,3 +113,16 @@ C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\obj\Debug\DynamicRepo.Tests.csprojRe
 C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\obj\Debug\DynamicRepo.Tests.csproj.CoreCompileInputs.cache
 C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\obj\Debug\DynamicRepo.Tests.dll
 C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\obj\Debug\DynamicRepo.Tests.pdb
+C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\bin\Debug\Castle.Core.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\bin\Debug\DynamicRepo.Contracts.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\bin\Debug\Moq.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\bin\Debug\DynamicRepo.Contracts.pdb
+C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\bin\Debug\Castle.Core.xml
+C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\bin\Debug\Moq.pdb
+C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\bin\Debug\Moq.xml
+C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\bin\Debug\Npgsql.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\bin\Debug\Npgsql.xml
+C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\SourceRepo\DynamicRepo\DynamicRepo.Tests\bin\Debug\Newtonsoft.Json.dll

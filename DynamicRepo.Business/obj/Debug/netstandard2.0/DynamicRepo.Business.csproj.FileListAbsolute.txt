@@ -12,6 +12,8 @@ C:\SourceRepo\DynamicRepo\DynamicRepo.Business\bin\Debug\netstandard2.0\DynamicR
 C:\SourceRepo\DynamicRepo\DynamicRepo.Business\bin\Debug\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\SourceRepo\DynamicRepo\DynamicRepo.Business\bin\Debug\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.xml
 C:\SourceRepo\DynamicRepo\DynamicRepo.Business\bin\Debug\netstandard2.0\DynamicRepo.Contracts.dll
-C:\SourceRepo\DynamicRepo\DynamicRepo.Business\bin\Debug\netstandard2.0\Newtonsoft.Json.dll
 C:\SourceRepo\DynamicRepo\DynamicRepo.Business\bin\Debug\netstandard2.0\DynamicRepo.Contracts.pdb
-C:\SourceRepo\DynamicRepo\DynamicRepo.Business\bin\Debug\netstandard2.0\Newtonsoft.Json.xml
+C:\SourceRepo\DynamicRepo\DynamicRepo.Business\bin\Debug\netstandard2.0\System.Configuration.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Business\bin\Debug\netstandard2.0\System.Security.dll
+C:\SourceRepo\DynamicRepo\DynamicRepo.Business\bin\Debug\netstandard2.0\System.Configuration.xml
+C:\SourceRepo\DynamicRepo\DynamicRepo.Business\bin\Debug\netstandard2.0\System.Security.xml

@@ -667,6 +667,27 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
+      },
+      "DynamicRepo.Contracts/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DynamicRepo.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DynamicRepo.Contracts.dll": {}
+        }
+      },
+      "ZeroConfigServiceSettings/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "DynamicRepo.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ZeroConfigServiceSettings.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ZeroConfigServiceSettings.dll": {}
+        }
       }
     }
   },
@@ -3103,13 +3124,25 @@
         "system.xml.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xmldocument.nuspec"
       ]
+    },
+    "DynamicRepo.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../DynamicRepo.Contracts/DynamicRepo.Contracts.csproj",
+      "msbuildProject": "../DynamicRepo.Contracts/DynamicRepo.Contracts.csproj"
+    },
+    "ZeroConfigServiceSettings/1.0.0": {
+      "type": "project",
+      "path": "../ZeroConfigServiceSettings/ZeroConfigServiceSettings.csproj",
+      "msbuildProject": "../ZeroConfigServiceSettings/ZeroConfigServiceSettings.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "DynamicRepo.Contracts >= 1.0.0",
       "NETStandard.Library >= 2.0.0",
       "Newtonsoft.Json >= 10.0.3",
-      "Npgsql >= 3.2.5"
+      "Npgsql >= 3.2.5",
+      "ZeroConfigServiceSettings >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3148,7 +3181,14 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\SourceRepo\\DynamicRepo\\ZeroConfigServiceSettings\\ZeroConfigServiceSettings.csproj": {
+              "projectPath": "C:\\SourceRepo\\DynamicRepo\\ZeroConfigServiceSettings\\ZeroConfigServiceSettings.csproj"
+            },
+            "C:\\SourceRepo\\DynamicRepo\\DynamicRepo.Contracts\\DynamicRepo.Contracts.csproj": {
+              "projectPath": "C:\\SourceRepo\\DynamicRepo\\DynamicRepo.Contracts\\DynamicRepo.Contracts.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

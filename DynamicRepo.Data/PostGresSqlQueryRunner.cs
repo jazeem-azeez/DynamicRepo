@@ -1,13 +1,22 @@
-﻿using Npgsql;
+﻿using DynamicRepo.Contracts.Data;
+using Npgsql;
 using System;
 using System.Data;
+using ZeroConfigServiceSettings;
 
 namespace DynamicRepo.Data
 {
     //General Pattern is for all sql dapters
-    public class PostGresSqlQueryRunner
+    public class PostGresSqlQueryRunner : SqlCrudHelpers, ISqlQueryRunner<NpgsqlConnection, NpgsqlCommand>
     {
-        public void RunSQlExecuteNonQuery(string sql, string connectionString= @"Server=127.0.0.1;Port=5432;Database=DataRepo;Userid=postgres;
+        private readonly IConfigurationSettings _configurationSettings;
+
+        public PostGresSqlQueryRunner(IConfigurationSettings configurationSettings)
+        {
+            this._configurationSettings = configurationSettings;
+        }
+
+        public void RunSQlExecuteNonQuery(string sql, string connectionString = @"Server=127.0.0.1;Port=5432;Database=DataRepo;Userid=postgres;
 Password=root;Protocol=3;Pooling=true;MinPoolSize=1;MaxPoolSize=100;ConnectionLifeTime=15;")
         {
             try
@@ -21,7 +30,6 @@ Password=root;Protocol=3;Pooling=true;MinPoolSize=1;MaxPoolSize=100;ConnectionLi
                     }
                     connection.Close();
                 }
-
             }
             catch (Exception ex)
             {
@@ -42,9 +50,8 @@ Password=root;")
                         DataTable dt = new DataTable();
                         NpgsqlDataAdapter objDataAdapter = new NpgsqlDataAdapter(cmd);
                         objDataAdapter.Fill(dt);
-                    return dt;
+                        return dt;
                     }
-                    
                 }
             }
             catch (Exception ex)
@@ -52,6 +59,5 @@ Password=root;")
                 throw ex;
             }
         }
-        
     }
 }

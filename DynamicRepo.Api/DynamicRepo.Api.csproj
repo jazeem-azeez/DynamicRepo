@@ -25,6 +25,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DynamicRepo.Business\DynamicRepo.Business.csproj" />
     <ProjectReference Include="..\DynamicRepo.Common\DynamicRepo.Common.csproj" />
+    <ProjectReference Include="..\DynamicRepo.Data\DynamicRepo.Data.csproj" />
   </ItemGroup>
 
 </Project>

@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Business\IStoreDriverOperations.cs" />
     <Compile Include="Business\IStoreGroupBusiness.cs" />
+    <Compile Include="Configuration\IConfigurationSettings.cs" />
     <Compile Include="Constants\Mechanims.cs" />
     <Compile Include="Data\ISqlQueryRunner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
