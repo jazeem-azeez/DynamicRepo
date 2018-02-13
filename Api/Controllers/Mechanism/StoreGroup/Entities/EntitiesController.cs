@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Contracts.Mechanism.StoreGroup.Entities;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 
@@ -7,19 +8,27 @@ namespace Api.Controllers.Mechanism.StoreGroup.Entities
     [Route("api/v1/mechanism/{mechanism}/storegroups/{storegroupName}/entities")]
     public class EntitiesController : Controller
     {
+        IEntitiesCrud _entitiesCrud;
+        public EntitiesController(IEntitiesCrud entitiesCrud)
+        {
+            this._entitiesCrud = entitiesCrud;
+        }
         [HttpDelete("{entityName}")]
-        public object Delete([FromRoute] string entityName,
+        public object Delete([FromRoute]string mechanism,
+                             [FromRoute] string storegroupName,
+                             [FromRoute] string entityName,
                              [FromQuery] string filter)
         {
-            return "";
+            return _entitiesCrud.Delete(mechanism, entityName, storegroupName, filter);
         }
 
         [HttpGet]
-        public IEnumerable<string> Get([FromRoute]string mechanism,
+        public object Get([FromRoute]string mechanism,
                                        [FromRoute] string storegroupName,
                                        [FromRoute] string entityName)
         {
-            return new string[] { "value1", "value2" };
+            return _entitiesCrud.Get(mechanism, storegroupName, entityName);
+
         }
 
         [HttpGet]
@@ -31,7 +40,8 @@ namespace Api.Controllers.Mechanism.StoreGroup.Entities
                           [FromQuery] int offset,
                           [FromQuery] int limit)
         {
-            return "value";
+            return _entitiesCrud.Get(mechanism, storegroupName, entityName, filter, offset, limit);
+
         }
 
         [HttpPost]
@@ -41,7 +51,7 @@ namespace Api.Controllers.Mechanism.StoreGroup.Entities
                            [FromRoute] string entityName,
                            [FromBody] JObject value)
         {
-            return "";
+            return _entitiesCrud.Post(mechanism, storegroupName, entityName, value);
         }
 
         [HttpPut]
@@ -52,7 +62,8 @@ namespace Api.Controllers.Mechanism.StoreGroup.Entities
                           [FromQuery] string filter,
                           [FromBody]JObject value)
         {
-            return "";
+            return _entitiesCrud.Put(mechanism, storegroupName, entityName, filter, value);
+
         }
     }
 }
