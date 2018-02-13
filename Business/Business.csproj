@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Contracts\Contracts.csproj" />
+    <ProjectReference Include="..\RepoDrivers\RepoDrivers.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,12 +1,16 @@
 ﻿using Contracts.Mechanism.StoreGroup.Entities;
 using Newtonsoft.Json.Linq;
+using RepoDrivers.DriverFactory;
 
 namespace Bussines.Mechanism.StoreGroup.Entities
 {
     public class EntitiesCrud : IEntitiesCrud
     {
-        public EntitiesCrud()
+        private readonly IDynaRepoDriverFactory _factory;
+
+        public EntitiesCrud(IDynaRepoDriverFactory factory)
         {
+            this._factory = factory;
         }
 
         public JObject Delete(string mechanism, 
@@ -14,14 +18,16 @@ namespace Bussines.Mechanism.StoreGroup.Entities
                               string storegroupName,
                               string filter)
         {
-            return null;
+            var repoDriver=_factory.GetRepoDriver(mechanism, storegroupName);
+           return repoDriver.GetEntityHandler().Delete(entityName, filter);
         }
 
         public JObject Get(string mechanism,
                                         string storegroupName,
                                         string entityName)
         {
-            return null;
+            var repoDriver = _factory.GetRepoDriver(mechanism, storegroupName);
+            return repoDriver.GetEntityHandler().Get(entityName);
         }
 
         public JObject Get(string mechanism,
@@ -31,7 +37,8 @@ namespace Bussines.Mechanism.StoreGroup.Entities
                            int offset,
                            int limit)
         {
-            return null;
+            var repoDriver = _factory.GetRepoDriver(mechanism, storegroupName);
+            return repoDriver.GetEntityHandler().Get(entityName, filter,offset,limit);
         }
 
         public JObject Post(string mechanism,
@@ -39,7 +46,8 @@ namespace Bussines.Mechanism.StoreGroup.Entities
                             string entityName,
                             JObject value)
         {
-            return null;
+            var repoDriver = _factory.GetRepoDriver(mechanism, storegroupName);
+            return repoDriver.GetEntityHandler().Post( entityName, value);
         }
 
         public JObject Put(string mechanism,
@@ -48,7 +56,8 @@ namespace Bussines.Mechanism.StoreGroup.Entities
                            string filter,
                           JObject value)
         {
-            return null;
+            var repoDriver = _factory.GetRepoDriver(mechanism, storegroupName);
+            return repoDriver.GetEntityHandler().Put(entityName, filter,value);
         }
     }
 }
