@@ -1,6 +1,0 @@
-C:\SourceRepo\DynamicRepo\DynamicRepo.APCI\bin\Debug\DynamicRepo.APCI.dll
-C:\SourceRepo\DynamicRepo\DynamicRepo.APCI\bin\Debug\DynamicRepo.APCI.pdb
-C:\SourceRepo\DynamicRepo\DynamicRepo.APCI\obj\Debug\DynamicRepo.APCI.csprojResolveAssemblyReference.cache
-C:\SourceRepo\DynamicRepo\DynamicRepo.APCI\obj\Debug\DynamicRepo.APCI.csproj.CoreCompileInputs.cache
-C:\SourceRepo\DynamicRepo\DynamicRepo.APCI\obj\Debug\DynamicRepo.APCI.dll
-C:\SourceRepo\DynamicRepo\DynamicRepo.APCI\obj\Debug\DynamicRepo.APCI.pdb

@@ -1,7 +1,0 @@
-1. Create Store 
-	1.1 Sql DataBase
-2. Create Table
-3. Select All Entity 
-4. Select By Id
-5. Select By Filter Clause/Expression Tree
-6. Run Sql Query
