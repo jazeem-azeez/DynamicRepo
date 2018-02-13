@@ -8,6 +8,8 @@ namespace RepoDrivers.Driver.PostGresDriver
 {
     public class PostGresDynaRepoDriver : IDynaRepoDriver<PostGresMechanismDescriptor>
     {
+        public IActionObserver observer { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public IEntityHandler GetEntityHandler(PostGresMechanismDescriptor descriptor)
         {
             throw new NotImplementedException();
