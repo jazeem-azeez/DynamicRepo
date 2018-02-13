@@ -6,15 +6,17 @@ using System;
 using System.Diagnostics.Contracts;
 using System.Threading.Tasks;
 
-namespace DynamicRepo.Business.storegroup
+namespace DynamicRepo.Business.StoreGroup
 {
     public class StoreGroupBusiness : IStoreGroupBusiness
     {
         private readonly Func<Mechanisms, IStoreDriverOperations> _dataServiceFactory;
+        private readonly IStoreConnection _storeConnection;
 
-        public StoreGroupBusiness(Func<Mechanisms, IStoreDriverOperations> dataServiceFactory)
+        public StoreGroupBusiness(Func<Mechanisms, IStoreDriverOperations> dataServiceFactory,IStoreConnection storeConnection)
         {
             this._dataServiceFactory = dataServiceFactory;
+            this._storeConnection = storeConnection;
         }
 
         public Task<bool> CreateDataStore(JObject storeCreatejObject, string mechanism)
@@ -27,8 +29,8 @@ namespace DynamicRepo.Business.storegroup
             {
 
                 var driver = _dataServiceFactory(Mechanisms.PostGres);
-             
-                return driver.CreateDataStore(storeCreatejObject);
+                var connection = _storeConnection.GetStoreConnection();
+                return driver.CreateDataStore(storeCreatejObject,connection);
             }
             catch (Exception ex)
             {

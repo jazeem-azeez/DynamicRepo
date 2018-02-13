@@ -1,10 +1,12 @@
-﻿using System.Data;
+﻿using DynamicRepo.Contracts.Business;
+using System.Data;
+using System.Threading.Tasks;
 
 namespace DynamicRepo.Contracts.Data
 {
     public interface ISqlQueryRunner<TConnection,TCommand>
     {
-        void RunSQlExecuteNonQuery(string sql, string connectionString = "Server=127.0.0.1;Port=5432;Database=DataRepo;Userid=postgres;\r\nPassword=root;");
-        DataTable RunSQlExecuteReader(string sql, string connectionString = "Server=127.0.0.1;Port=5432;Database=DataRepo;Userid=postgres;\r\nPassword=root;");
+        Task<bool> RunSQlExecuteNonQueryAsync(string sql, IStoreConnection connection );
+        DataTable RunSQlExecuteReader(string sql, IStoreConnection connection);
     }
 }

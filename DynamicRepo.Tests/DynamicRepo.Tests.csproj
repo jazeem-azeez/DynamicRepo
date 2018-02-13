@@ -64,9 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Drivers\PostGres\PostGresDriverTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StoreGroupBusinessTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -13974,6 +13974,7 @@
       "Autofac.Extensions.DependencyInjection >= 4.2.0",
       "DynamicRepo.Business >= 1.0.0",
       "DynamicRepo.Common >= 1.0.0",
+      "DynamicRepo.Contracts >= 1.0.0",
       "DynamicRepo.Data >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.3",
       "Microsoft.EntityFrameworkCore >= 2.0.1",
@@ -14012,9 +14013,6 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {},
-        "https://itron.pkgs.visualstudio.com/_packaging/Itron.Cloud.DeviceCommunication/nuget/v3/index.json": {},
-        "https://itron.pkgs.visualstudio.com/_packaging/Itron.Cloud.DeviceManagement/nuget/v3/index.json": {},
-        "https://itron.pkgs.visualstudio.com/_packaging/Itron.Cloud.Identity/nuget/v3/index.json": {},
         "https://itron.pkgs.visualstudio.com/_packaging/Itron.Cloud.Platform/nuget/v3/index.json": {}
       },
       "frameworks": {
@@ -14025,6 +14023,9 @@
             },
             "C:\\SourceRepo\\DynamicRepo\\DynamicRepo.Common\\DynamicRepo.Common.csproj": {
               "projectPath": "C:\\SourceRepo\\DynamicRepo\\DynamicRepo.Common\\DynamicRepo.Common.csproj"
+            },
+            "C:\\SourceRepo\\DynamicRepo\\DynamicRepo.Contracts\\DynamicRepo.Contracts.csproj": {
+              "projectPath": "C:\\SourceRepo\\DynamicRepo\\DynamicRepo.Contracts\\DynamicRepo.Contracts.csproj"
             },
             "C:\\SourceRepo\\DynamicRepo\\DynamicRepo.Business\\DynamicRepo.Business.csproj": {
               "projectPath": "C:\\SourceRepo\\DynamicRepo\\DynamicRepo.Business\\DynamicRepo.Business.csproj"

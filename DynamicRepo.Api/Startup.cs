@@ -2,7 +2,7 @@
 using Autofac.Extensions.DependencyInjection;
 using DynamicRepo.Business.Drivers;
 using DynamicRepo.Business.Drivers.PostGres;
-using DynamicRepo.Business.storegroup;
+using DynamicRepo.Business.StoreGroup;
 using DynamicRepo.Contracts.Business;
 using DynamicRepo.Contracts.Business.Constants;
 using DynamicRepo.Contracts.Data;
@@ -48,6 +48,7 @@ namespace DynamicRepo.Api
 
             // use and configure the custom container
             builder.RegisterType<StoreGroupBusiness>().As<IStoreGroupBusiness>();
+            builder.RegisterType<StoreConnection>().As<IStoreConnection>();
             builder.RegisterType<ConfigurationSettings>().As<IConfigurationSettings>();
             builder.RegisterType<DefaultSettingsStore>().As<ISettingsStore>();
             builder.RegisterType(typeof(PostGresSqlQueryRunner)).As(typeof(ISqlQueryRunner<NpgsqlConnection, NpgsqlCommand>));

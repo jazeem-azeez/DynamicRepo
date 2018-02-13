@@ -1,7 +1,9 @@
-﻿using DynamicRepo.Contracts.Data;
+﻿using DynamicRepo.Contracts.Business;
+using DynamicRepo.Contracts.Data;
 using Npgsql;
 using System;
 using System.Data;
+using System.Threading.Tasks;
 using ZeroConfigServiceSettings;
 
 namespace DynamicRepo.Data
@@ -16,20 +18,22 @@ namespace DynamicRepo.Data
             this._configurationSettings = configurationSettings;
         }
 
-        public void RunSQlExecuteNonQuery(string sql, string connectionString = @"Server=127.0.0.1;Port=5432;Database=DataRepo;Userid=postgres;
-Password=root;Protocol=3;Pooling=true;MinPoolSize=1;MaxPoolSize=100;ConnectionLifeTime=15;")
+      
+
+        public async Task<bool> RunSQlExecuteNonQueryAsync(string sql, IStoreConnection storeConnection)
         {
             try
             {
-                using (var connection = new NpgsqlConnection(connectionString))
+                using (var connection = new NpgsqlConnection(storeConnection.ConnectionString))
                 {
                     connection.Open();
                     using (var cmd = new NpgsqlCommand(sql, connection))
                     {
-                        cmd.ExecuteNonQuery();
+                        await cmd.ExecuteNonQueryAsync();
                     }
                     connection.Close();
                 }
+                return true;
             }
             catch (Exception ex)
             {
@@ -37,12 +41,11 @@ Password=root;Protocol=3;Pooling=true;MinPoolSize=1;MaxPoolSize=100;ConnectionLi
             }
         }
 
-        public DataTable RunSQlExecuteReader(string sql, string connectionString = @"Server=127.0.0.1;Port=5432;Database=DataRepo;Userid=postgres;
-Password=root;")
+        public DataTable RunSQlExecuteReader(string sql, IStoreConnection storeConnection)
         {
             try
             {
-                using (var connection = new NpgsqlConnection(connectionString))
+                using (var connection = new NpgsqlConnection(storeConnection.ConnectionString))
                 {
                     connection.Open();
                     using (var cmd = new NpgsqlCommand(sql, connection))

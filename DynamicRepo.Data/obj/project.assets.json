@@ -3174,9 +3174,6 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {},
-        "https://itron.pkgs.visualstudio.com/_packaging/Itron.Cloud.DeviceCommunication/nuget/v3/index.json": {},
-        "https://itron.pkgs.visualstudio.com/_packaging/Itron.Cloud.DeviceManagement/nuget/v3/index.json": {},
-        "https://itron.pkgs.visualstudio.com/_packaging/Itron.Cloud.Identity/nuget/v3/index.json": {},
         "https://itron.pkgs.visualstudio.com/_packaging/Itron.Cloud.Platform/nuget/v3/index.json": {}
       },
       "frameworks": {

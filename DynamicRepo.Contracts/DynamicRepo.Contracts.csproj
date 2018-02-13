@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\IEntityBusiness.cs" />
+    <Compile Include="Business\IStoreConnection.cs" />
     <Compile Include="Business\IStoreDriverOperations.cs" />
     <Compile Include="Business\IStoreGroupBusiness.cs" />
     <Compile Include="Configuration\IConfigurationSettings.cs" />

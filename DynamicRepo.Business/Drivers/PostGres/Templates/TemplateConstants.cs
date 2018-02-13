@@ -18,12 +18,11 @@
         {
             get
             {
-                return @"CREATE TABLE
-                            {{tableName}}
+                return "CREATE TABLE \"{{databaseName}}\"" + @"
                             (
                             {{columns}}
-                            ) {{partioning}}
-                            WITH( OIDS = {{OIDS}} );";
+                            ) 
+                            WITH( OIDS = false );";
             }
         }
 
@@ -58,5 +57,8 @@
                 return @"UPDATE {{tableName}} SET {{setValueList}} {{filter}} ";
             }
         }
+
+        public static string Keys_CreateViewScript { get; internal set; }
+        public static string Keys_StoreTableScript { get { return @" insert into {{tableName}} ({{columns}}) values ({{values}})"; } }
     }
 }
