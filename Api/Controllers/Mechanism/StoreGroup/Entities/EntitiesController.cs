@@ -1,18 +1,19 @@
 ﻿using Contracts.Mechanism.StoreGroup.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
-using System.Collections.Generic;
 
 namespace Api.Controllers.Mechanism.StoreGroup.Entities
 {
     [Route("api/v1/mechanism/{mechanism}/storegroups/{storegroupName}/entities")]
     public class EntitiesController : Controller
     {
-        IEntitiesCrud _entitiesCrud;
+        private IEntitiesCrud _entitiesCrud;
+
         public EntitiesController(IEntitiesCrud entitiesCrud)
         {
             this._entitiesCrud = entitiesCrud;
         }
+
         [HttpDelete("{entityName}")]
         public object Delete([FromRoute]string mechanism,
                              [FromRoute] string storegroupName,
@@ -28,7 +29,6 @@ namespace Api.Controllers.Mechanism.StoreGroup.Entities
                                        [FromRoute] string entityName)
         {
             return _entitiesCrud.Get(mechanism, storegroupName, entityName);
-
         }
 
         [HttpGet]
@@ -41,7 +41,6 @@ namespace Api.Controllers.Mechanism.StoreGroup.Entities
                           [FromQuery] int limit)
         {
             return _entitiesCrud.Get(mechanism, storegroupName, entityName, filter, offset, limit);
-
         }
 
         [HttpPost]
@@ -63,7 +62,6 @@ namespace Api.Controllers.Mechanism.StoreGroup.Entities
                           [FromBody]JObject value)
         {
             return _entitiesCrud.Put(mechanism, storegroupName, entityName, filter, value);
-
         }
     }
 }

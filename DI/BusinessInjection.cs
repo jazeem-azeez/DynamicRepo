@@ -2,7 +2,7 @@
 using Contracts.Mechanism.StoreGroup.Entities;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DependencyInjection.InjectionBindings.Business
+namespace DI
 {
     public static class BusinessInjection
     {

@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json.Linq;
-using RepoDrivers.DriverFactory;
 using System.Collections.Generic;
 using System.Data;
 
@@ -7,7 +6,7 @@ namespace RepoDrivers.Driver.PostGres.Entity
 {
     public abstract class SqlCommandRunnerBase
     {
-       public JObject DataTableToJsonObject(DataTable dt)
+        public JObject DataTableToJsonObject(DataTable dt)
         {
             List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
             Dictionary<string, object> row;

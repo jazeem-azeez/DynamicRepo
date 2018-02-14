@@ -4,6 +4,6 @@ namespace Contracts.InjectionBindings
 {
     public interface IInjectionBindings
     {
-         IServiceCollection Bind(IServiceCollection service);
+        IServiceCollection Bind(IServiceCollection service);
     }
 }

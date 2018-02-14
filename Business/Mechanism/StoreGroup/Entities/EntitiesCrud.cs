@@ -13,13 +13,13 @@ namespace Bussines.Mechanism.StoreGroup.Entities
             this._factory = factory;
         }
 
-        public JObject Delete(string mechanism, 
+        public JObject Delete(string mechanism,
                               string entityName,
                               string storegroupName,
                               string filter)
         {
-            var repoDriver=_factory.GetRepoDriver(mechanism, storegroupName);
-           return repoDriver.GetEntityHandler().Delete(entityName, filter);
+            var repoDriver = _factory.GetRepoDriver(mechanism, storegroupName);
+            return repoDriver.GetEntityHandler().Delete(entityName, filter);
         }
 
         public JObject Get(string mechanism,
@@ -38,7 +38,7 @@ namespace Bussines.Mechanism.StoreGroup.Entities
                            int limit)
         {
             var repoDriver = _factory.GetRepoDriver(mechanism, storegroupName);
-            return repoDriver.GetEntityHandler().Get(entityName, filter,offset,limit);
+            return repoDriver.GetEntityHandler().Get(entityName, filter, offset, limit);
         }
 
         public JObject Post(string mechanism,
@@ -47,7 +47,7 @@ namespace Bussines.Mechanism.StoreGroup.Entities
                             JObject value)
         {
             var repoDriver = _factory.GetRepoDriver(mechanism, storegroupName);
-            return repoDriver.GetEntityHandler().Post( entityName, value);
+            return repoDriver.GetEntityHandler().Post(entityName, value);
         }
 
         public JObject Put(string mechanism,
@@ -57,7 +57,7 @@ namespace Bussines.Mechanism.StoreGroup.Entities
                           JObject value)
         {
             var repoDriver = _factory.GetRepoDriver(mechanism, storegroupName);
-            return repoDriver.GetEntityHandler().Put(entityName, filter,value);
+            return repoDriver.GetEntityHandler().Put(entityName, filter, value);
         }
     }
 }

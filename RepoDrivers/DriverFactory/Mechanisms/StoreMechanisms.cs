@@ -2,6 +2,6 @@
 {
     public enum StoreMechanisms
     {
-        MsSql ,PostGresSql ,Redis , MongoDb    
+        MsSql, PostGresSql, Redis, MongoDb
     }
 }

@@ -7,12 +7,12 @@ namespace RepoDrivers.Driver.PostGresDriver
 {
     public class PostGresDynaRepoDriver : IDynaRepoDriver<PostGresMechanismDescriptor>
     {
-        public IActionObserver observer { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public PostGresMechanismDescriptor Descriptor { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public IActionObserver observer { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        public IEntityHandler GetEntityHandler()
+        public IEntityHandler<PostGresMechanismDescriptor> GetEntityHandler()
         {
-            return new PostGresEntityHandler(new PostGresEntityScriptGenerator(), (ISqlCommandRunner<IStoreMechanismDescriptor>)new PostGres.PgSqlCommandRunner(),new PostGresMechanismDescriptor());
+            return new PostGresEntityHandler(new PostGresEntityScriptGenerator(), new PostGres.PgSqlCommandRunner(), new PostGresMechanismDescriptor());
         }
 
         public IMechanismHandler GetMechanismHandler()
