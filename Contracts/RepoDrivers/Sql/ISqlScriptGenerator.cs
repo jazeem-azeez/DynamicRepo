@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json.Linq;
 
-namespace RepoDrivers.Sql.Shared
+namespace RepoDrivers
 {
-    public interface ISqlEntityScriptGenerator
+    public interface ISqlEntityScriptGenerator<T> where T : class ,IStoreMechanismDescriptor
     {
         string CreateAndInsert(JObject jObject, string entityName);
 

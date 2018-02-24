@@ -1,9 +1,14 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Contracts.SharedModels;
+using Microsoft.Extensions.DependencyInjection;
+using RepoDrivers;
 using RepoDrivers.Driver;
 using RepoDrivers.Driver.PostGres;
 using RepoDrivers.Driver.PostGres.Entity;
 using RepoDrivers.Driver.PostGresDriver;
 using RepoDrivers.DriverFactory;
+using RepoDrivers.DriverFactory.Connection;
+using RepoDrivers.Sql.PostGres;
+using RepoDrivers.Sql.Shared;
 
 namespace DI
 {
@@ -11,9 +16,14 @@ namespace DI
     {
         public static void Bind(IServiceCollection service)
         {
-            service.AddTransient<IDynaRepoDriver<PostGresMechanismDescriptor>, PostGresDynaRepoDriver>();
+            //RepoDrivers.DriverFactory.IDynaRepoDriverFactory
+            service.AddTransient<IDynaRepoDriverFactory, DynaRepoDriverFactory>();
+            service.AddTransient<IDynaRepoDriver<PostGresMechanismDescriptor>, PostGresDynaRepoDriver<PostGresMechanismDescriptor>>();
             service.AddTransient<IEntityHandler<PostGresMechanismDescriptor>, PostGresEntityHandler>();
             service.AddTransient<ISqlCommandRunner<PostGresMechanismDescriptor>, PgSqlCommandRunner>();
+            service.AddTransient<ISqlEntityScriptGenerator<PostGresMechanismDescriptor>, PostGresEntityScriptGenerator>();
+            service.AddSingleton<PostGresMechanismDescriptor, PostGresMechanismDescriptor>();
+            service.AddTransient<IConnectionInfoManager, ConnectionInfoManager>();
         }
     }
 }

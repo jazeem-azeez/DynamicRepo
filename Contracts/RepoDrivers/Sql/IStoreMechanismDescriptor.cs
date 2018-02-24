@@ -1,4 +1,6 @@
-﻿namespace RepoDrivers.DriverFactory
+﻿using Contracts.RepoDrivers.Mechanism;
+
+namespace RepoDrivers
 {
     public interface IStoreMechanismDescriptor
     {
@@ -7,5 +9,6 @@
         StoreMechanisms Mechanism { get; }
         string StoreGroupName { get; set; }
         string User { get; set; }
+        string Password { get; set; }
     }
 }

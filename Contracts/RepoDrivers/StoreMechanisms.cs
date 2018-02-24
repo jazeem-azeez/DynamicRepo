@@ -1,4 +1,4 @@
-﻿namespace RepoDrivers.DriverFactory
+﻿namespace Contracts.RepoDrivers.Mechanism
 {
     public enum StoreMechanisms
     {

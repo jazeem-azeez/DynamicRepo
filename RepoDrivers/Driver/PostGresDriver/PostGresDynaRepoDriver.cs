@@ -5,14 +5,20 @@ using System;
 
 namespace RepoDrivers.Driver.PostGresDriver
 {
-    public class PostGresDynaRepoDriver : IDynaRepoDriver<PostGresMechanismDescriptor>
+    public class PostGresDynaRepoDriver<T>: IDynaRepoDriver<T> where T :class ,IStoreMechanismDescriptor
     {
-        public PostGresMechanismDescriptor Descriptor { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        private readonly IEntityHandler<T> _entityHandler;
+
+        public PostGresDynaRepoDriver(IEntityHandler<T> entityHandler)
+        {
+            this._entityHandler = entityHandler;
+        }
+        public T Descriptor { get; set; }
         public IActionObserver observer { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        public IEntityHandler<PostGresMechanismDescriptor> GetEntityHandler()
+        public IEntityHandler<T> GetEntityHandler()
         {
-            return new PostGresEntityHandler(new PostGresEntityScriptGenerator(), new PostGres.PgSqlCommandRunner(), new PostGresMechanismDescriptor());
+            return _entityHandler;
         }
 
         public IMechanismHandler GetMechanismHandler()
@@ -25,7 +31,7 @@ namespace RepoDrivers.Driver.PostGresDriver
             throw new NotImplementedException();
         }
 
-        public void SetDescriptor(PostGresMechanismDescriptor value)
+        public void SetDescriptor(T value)
         {
             throw new NotImplementedException();
         }

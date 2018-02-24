@@ -8,9 +8,11 @@ namespace RepoDrivers.Driver.PostGres.Entity
     {
         public PostGresMechanismDescriptor _mechanism;
         private readonly ISqlCommandRunner<PostGresMechanismDescriptor> _commandRunner;
-        private readonly ISqlEntityScriptGenerator _scriptGenerator;
+        private readonly ISqlEntityScriptGenerator<PostGresMechanismDescriptor> _scriptGenerator;
 
-        public PostGresEntityHandler(ISqlEntityScriptGenerator scriptGenerator, ISqlCommandRunner<PostGresMechanismDescriptor> commandRunner, PostGresMechanismDescriptor mechanism)
+        public PostGresEntityHandler(ISqlEntityScriptGenerator<PostGresMechanismDescriptor> scriptGenerator, 
+                                        ISqlCommandRunner<PostGresMechanismDescriptor> commandRunner, 
+                                        PostGresMechanismDescriptor mechanism)
         {
             this._scriptGenerator = scriptGenerator;
             this._mechanism = mechanism;

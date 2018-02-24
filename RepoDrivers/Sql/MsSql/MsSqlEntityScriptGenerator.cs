@@ -2,7 +2,7 @@
 
 namespace RepoDrivers.Sql.MsSql
 {
-    public class MsSqlEntityScriptGenerator : SqlEntityScriptGeneratorsBase, ISqlEntityScriptGenerator
+    public class MsSqlEntityScriptGenerator : SqlEntityScriptGeneratorsBase, ISqlEntityScriptGenerator<MsSqlMechanismDescriptor>
     {
     }
 }
