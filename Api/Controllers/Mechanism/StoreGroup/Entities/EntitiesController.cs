@@ -5,7 +5,7 @@ using Newtonsoft.Json.Linq;
 namespace Api.Controllers.Mechanism.StoreGroup.Entities
 {
     [Route("api/v1/mechanism/{mechanism}/storegroups/{storegroupName}/entities")]
-    public class EntitiesController : Controller
+    public class EntitiesController : Controller, IEntitiesAPI
     {
         private IEntitiesCrud _entitiesCrud;
 
