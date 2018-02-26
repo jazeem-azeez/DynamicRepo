@@ -21,7 +21,7 @@ namespace RepoDrivers.DriverFactory.Connection
                 pgDs.Password = "root";
                 pgDs.EndPoint= "127.0.0.1";
                 pgDs.StoreGroupName= "DataRepo";
-                pgDs.ConnectionString = $"Server={pgDs.EndPoint};Port=5432;Database={pgDs.StoreGroupName};Userid={pgDs.User};Password = {pgDs.Password}; Protocol = 3; Pooling = true; MinPoolSize = 1; MaxPoolSize = 20;ConnectionLifeTime = 15; ";
+                pgDs.ConnectionString = $"Server={pgDs.EndPoint};Port=5432;Database={pgDs.StoreGroupName};Userid={pgDs.User};Password = {pgDs.Password}; ";
                 new ConnectionInfoManager().SetConnectionInfo(pgDs.Mechanism.ToString(), pgDs.StoreGroupName, new ConnectionInfo() { ConnectionInfoObject = pgDs, ConnectionKey = GetKey(pgDs.Mechanism.ToString(), pgDs.StoreGroupName) });
             }
         }

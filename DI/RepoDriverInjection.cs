@@ -18,7 +18,7 @@ namespace DI
         {
             //RepoDrivers.DriverFactory.IDynaRepoDriverFactory
             service.AddTransient<IDynaRepoDriverFactory, DynaRepoDriverFactory>();
-            service.AddTransient<IDynaRepoDriver<PostGresMechanismDescriptor>, PostGresDynaRepoDriver<PostGresMechanismDescriptor>>();
+            service.AddTransient<IDynaRepoDriver<PostGresMechanismDescriptor>, PostGresDynaRepoDriver>();
             service.AddTransient<IEntityHandler<PostGresMechanismDescriptor>, PostGresEntityHandler>();
             service.AddTransient<ISqlCommandRunner<PostGresMechanismDescriptor>, PgSqlCommandRunner>();
             service.AddTransient<ISqlEntityScriptGenerator<PostGresMechanismDescriptor>, PostGresEntityScriptGenerator>();

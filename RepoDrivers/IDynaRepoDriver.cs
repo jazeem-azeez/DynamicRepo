@@ -1,11 +1,12 @@
-﻿using RepoDrivers.Driver.PostGres.Entity;
+﻿using Contracts.SharedModels;
+using RepoDrivers.Driver.PostGres.Entity;
 using RepoDrivers.DriverFactory;
 
 namespace RepoDrivers.Driver
 {
-    public interface IDynaRepoDriver<T> where T : class, IStoreMechanismDescriptor
+    public interface IDynaRepoDriver<out T> where T : class, IStoreMechanismDescriptor
     {
-        T Descriptor { get; set; }
+        T StoreMechanismDescriptor { get; }
 
         IActionObserver observer { get; set; }
 
@@ -14,7 +15,6 @@ namespace RepoDrivers.Driver
         IMechanismHandler GetMechanismHandler();
 
         IStoreHandler GetStoreHandler();
-
-        void SetDescriptor(T value);
+        void SetMechanismDescriptor(ConnectionInfo connectionInfoObject);
     }
 }

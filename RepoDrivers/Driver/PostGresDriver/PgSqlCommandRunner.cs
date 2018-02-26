@@ -9,7 +9,7 @@ namespace RepoDrivers.Driver.PostGres
 {
     public class PgSqlCommandRunner : SqlCommandRunnerBase, ISqlCommandRunner<PostGresMechanismDescriptor>
     {
-        public JObject RunScalarCommand(string command, PostGresMechanismDescriptor mechanism)
+        public JToken RunScalarCommand(string command, PostGresMechanismDescriptor mechanism)
         {
             try
             {
@@ -23,7 +23,7 @@ namespace RepoDrivers.Driver.PostGres
                     }
                     connection.Close();
                 }
-                return new JObject(affectedEntries);
+                return JToken.FromObject(affectedEntries);
             }
             catch (Exception ex)
             {
@@ -31,7 +31,7 @@ namespace RepoDrivers.Driver.PostGres
             }
         }
 
-        public JObject RunVectorCommand(string command, PostGresMechanismDescriptor mechanism)
+        public JToken RunVectorCommand(string command, PostGresMechanismDescriptor mechanism)
         {
             try
             {

@@ -3,18 +3,18 @@ using RepoDrivers.DriverFactory;
 
 namespace RepoDrivers.Driver.PostGres.Entity
 {
-    public interface IEntityHandler<T> where T : class, IStoreMechanismDescriptor
+    public interface IEntityHandler<out T> where T : class, IStoreMechanismDescriptor
     {
-        T Mechanism { get; set; }
+        T StoreMechnismDesciptor { get; }
+        JToken Delete(string entityName, string filter);
 
-        JObject Delete(string entityName, string filter);
+        JToken Get(string entityName);
 
-        JObject Get(string entityName);
+        JToken Get(string entityName, string filter, int offset, int limit);
 
-        JObject Get(string entityName, string filter, int offset, int limit);
+        JToken Post(string entityName, JObject value);
 
-        JObject Post(string entityName, JObject value);
-
-        JObject Put(string entityName, string filter, JObject value);
+        JToken Put(string entityName, string filter, JObject value);
+        void SetStoreMechanismDescriptor(IStoreMechanismDescriptor mechanismDescriptor);
     }
 }

@@ -38,7 +38,7 @@ namespace RepoDrivers.DriverFactory
         {
 
             var objectResult = _serviceProvider.GetService<IDynaRepoDriver<PostGresMechanismDescriptor>>();
-            objectResult.Descriptor = (PostGresMechanismDescriptor)_connectionInfoManager.GetConnectionInfo(StoreMechanisms.PostGresSql.ToString(), storeGroup)?.ConnectionInfoObject;
+            objectResult.SetMechanismDescriptor(_connectionInfoManager.GetConnectionInfo(StoreMechanisms.PostGresSql.ToString(), storeGroup));
             return  objectResult;
         }
 

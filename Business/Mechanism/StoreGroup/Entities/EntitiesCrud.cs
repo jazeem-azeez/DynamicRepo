@@ -13,7 +13,7 @@ namespace Bussines.Mechanism.StoreGroup.Entities
             this._factory = factory;
         }
 
-        public JObject Delete(string mechanism,
+        public JToken Delete(string mechanism,
                               string entityName,
                               string storegroupName,
                               string filter)
@@ -22,7 +22,7 @@ namespace Bussines.Mechanism.StoreGroup.Entities
             return repoDriver.GetEntityHandler().Delete(entityName, filter);
         }
 
-        public JObject Get(string mechanism,
+        public JToken Get(string mechanism,
                                         string storegroupName,
                                         string entityName)
         {
@@ -30,7 +30,7 @@ namespace Bussines.Mechanism.StoreGroup.Entities
             return repoDriver.GetEntityHandler().Get(entityName);
         }
 
-        public JObject Get(string mechanism,
+        public JToken Get(string mechanism,
                            string storegroupName,
                            string entityName,
                            string filter,
@@ -41,7 +41,7 @@ namespace Bussines.Mechanism.StoreGroup.Entities
             return repoDriver.GetEntityHandler().Get(entityName, filter, offset, limit);
         }
 
-        public JObject Post(string mechanism,
+        public JToken Post(string mechanism,
                             string storegroupName,
                             string entityName,
                             JObject value)
@@ -50,7 +50,7 @@ namespace Bussines.Mechanism.StoreGroup.Entities
             return repoDriver.GetEntityHandler().Post(entityName, value);
         }
 
-        public JObject Put(string mechanism,
+        public JToken Put(string mechanism,
                            string storegroupName,
                            string entityName,
                            string filter,

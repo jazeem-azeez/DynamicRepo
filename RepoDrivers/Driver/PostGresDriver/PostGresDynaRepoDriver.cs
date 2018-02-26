@@ -1,23 +1,24 @@
 ﻿using RepoDrivers.Driver.PostGres.Entity;
-using RepoDrivers.DriverFactory;
-using RepoDrivers.Sql.PostGres;
 using System;
+using Contracts.SharedModels;
 
 namespace RepoDrivers.Driver.PostGresDriver
 {
-    public class PostGresDynaRepoDriver<T>: IDynaRepoDriver<T> where T :class ,IStoreMechanismDescriptor
+    public class PostGresDynaRepoDriver : IDynaRepoDriver<PostGresMechanismDescriptor>
     {
-        private readonly IEntityHandler<T> _entityHandler;
+        private readonly IEntityHandler<PostGresMechanismDescriptor> _entityHandler;
 
-        public PostGresDynaRepoDriver(IEntityHandler<T> entityHandler)
+        public PostGresDynaRepoDriver(IEntityHandler<PostGresMechanismDescriptor> entityHandler)
         {
             this._entityHandler = entityHandler;
         }
-        public T Descriptor { get; set; }
+
+        public PostGresMechanismDescriptor StoreMechanismDescriptor { get; set; }
         public IActionObserver observer { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        public IEntityHandler<T> GetEntityHandler()
+        public IEntityHandler<PostGresMechanismDescriptor> GetEntityHandler()
         {
+            _entityHandler.SetStoreMechanismDescriptor(StoreMechanismDescriptor);
             return _entityHandler;
         }
 
@@ -31,9 +32,11 @@ namespace RepoDrivers.Driver.PostGresDriver
             throw new NotImplementedException();
         }
 
-        public void SetDescriptor(T value)
+        public void SetMechanismDescriptor(ConnectionInfo connectionInfoObject)
         {
-            throw new NotImplementedException();
+            //todo: use auto mapper if necessary 
+            var iStoreMechanismDescriptor = connectionInfoObject.ConnectionInfoObject as IStoreMechanismDescriptor;
+            StoreMechanismDescriptor = iStoreMechanismDescriptor as PostGresMechanismDescriptor;
         }
     }
 }

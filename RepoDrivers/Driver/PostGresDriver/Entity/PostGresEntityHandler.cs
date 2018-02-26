@@ -10,8 +10,8 @@ namespace RepoDrivers.Driver.PostGres.Entity
         private readonly ISqlCommandRunner<PostGresMechanismDescriptor> _commandRunner;
         private readonly ISqlEntityScriptGenerator<PostGresMechanismDescriptor> _scriptGenerator;
 
-        public PostGresEntityHandler(ISqlEntityScriptGenerator<PostGresMechanismDescriptor> scriptGenerator, 
-                                        ISqlCommandRunner<PostGresMechanismDescriptor> commandRunner, 
+        public PostGresEntityHandler(ISqlEntityScriptGenerator<PostGresMechanismDescriptor> scriptGenerator,
+                                        ISqlCommandRunner<PostGresMechanismDescriptor> commandRunner,
                                         PostGresMechanismDescriptor mechanism)
         {
             this._scriptGenerator = scriptGenerator;
@@ -19,36 +19,42 @@ namespace RepoDrivers.Driver.PostGres.Entity
             this._commandRunner = commandRunner;
         }
 
-        public PostGresMechanismDescriptor Mechanism { get => _mechanism; set => _mechanism = value; }
+        public PostGresMechanismDescriptor StoreMechnismDesciptor { get => _mechanism; }
 
-        public JObject Delete(string entityName, string filter)
+
+        public JToken Delete(string entityName, string filter)
         {
             string command = _scriptGenerator.Delete(entityName, filter);
             var response = _commandRunner.RunScalarCommand(command, _mechanism);
             return response;
         }
 
-        public JObject Get(string entityName) => Get(entityName, "", 0, 1000);
+        public JToken Get(string entityName) => Get(entityName, "", 0, 1000);
 
-        public JObject Get(string entityName, string filter, int offset, int limit)
+        public JToken Get(string entityName, string filter, int offset, int limit)
         {
             string command = _scriptGenerator.Retrive(entityName, filter, offset, limit);
             var response = _commandRunner.RunVectorCommand(command, _mechanism);
             return response;
         }
 
-        public JObject Post(string entityName, JObject value)
+        public JToken Post(string entityName, JObject value)
         {
             string command = _scriptGenerator.CreateAndInsert(value, entityName);
             var response = _commandRunner.RunScalarCommand(command, _mechanism);
             return response;
         }
 
-        public JObject Put(string entityName, string filter, JObject value)
+        public JToken Put(string entityName, string filter, JObject value)
         {
             string command = _scriptGenerator.Update(entityName, filter, value);
             var response = _commandRunner.RunScalarCommand(command, _mechanism);
             return response;
+        }
+
+        public void SetStoreMechanismDescriptor(IStoreMechanismDescriptor mechanismDescriptor)
+        {
+            _mechanism = (PostGresMechanismDescriptor)mechanismDescriptor;
         }
     }
 }

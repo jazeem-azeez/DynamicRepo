@@ -37,8 +37,8 @@ namespace Api.Controllers.Mechanism.StoreGroup.Entities
                           [FromRoute] string storegroupName,
                           [FromRoute] string entityName,
                           [FromQuery] string filter,
-                          [FromQuery] int offset,
-                          [FromQuery] int limit)
+                          [FromQuery] int offset=0,
+                          [FromQuery] int limit=1000)
         {
             return _entitiesCrud.Get(mechanism, storegroupName, entityName, filter, offset, limit);
         }

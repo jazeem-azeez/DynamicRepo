@@ -6,7 +6,7 @@ namespace RepoDrivers.Driver.PostGres.Entity
 {
     public abstract class SqlCommandRunnerBase
     {
-        public JObject DataTableToJsonObject(DataTable dt)
+        public JToken DataTableToJsonObject(DataTable dt)
         {
             List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
             Dictionary<string, object> row;
@@ -20,7 +20,7 @@ namespace RepoDrivers.Driver.PostGres.Entity
                 }
                 rows.Add(row);
             }
-            return new JObject(rows);
+            return JToken.FromObject(rows);
         }
     }
 }
